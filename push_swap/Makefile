@@ -4,7 +4,7 @@ BONUS=checker
 
 CC=cc
 
-FLAG=-Wall -Wextra -g #-Werror
+FLAG=-Wall -Wextra -Werror
 
 CFILE=push_swap.c \
 	push_swap_utils.c \
@@ -25,23 +25,23 @@ CFILE=push_swap.c \
 	sorter_2.c \
 	sorter_3.c
 
-BFILE=get_next_line_utils.c \
-	get_next_line.c \
-	checker.c \
-	s_checker.c \
-	p_checker.c \
-	r_checker.c \
-	list_functions.c \
-	list_functions_2.c \
-	fts.c \
-	fts_2.c \
-	fts_3.c \
-	fts_4.c \
-	ft_split.c \
-	freedom.c \
-	checker_sort.c \
-	push_swap_utils.c \
-	checkerrors.c
+BFILE=	bonus/get_next_line_utils.c \
+		bonus/get_next_line.c \
+		bonus/checker_bonus.c \
+		bonus/s_checker_bonus.c \
+		bonus/p_checker_bonus.c \
+		bonus/r_checker_bonus.c \
+		bonus/list_functions_bonus.c \
+		bonus/list_functions_2_bonus.c \
+		bonus/fts_bonus.c \
+		bonus/fts_2_bonus.c \
+		bonus/fts_3_bonus.c \
+		bonus/fts_4_bonus.c \
+		bonus/ft_split_bonus.c \
+		bonus/freedom_bonus.c \
+		bonus/checker_sort_bonus.c \
+		bonus/push_swap_utils_bonus.c \
+		bonus/checkerrors_bonus.c
 
 OBJ=${CFILE:.c=.o}
 
