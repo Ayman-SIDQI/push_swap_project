@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_sort.c                                     :+:      :+:    :+:   */
+/*   freedom.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 11:38:10 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/13 15:25:55 by asidqi           ###   ########.fr       */
+/*   Created: 2023/02/18 19:10:06 by asidqi            #+#    #+#             */
+/*   Updated: 2023/03/07 15:42:52 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-int	check_sort(t_list *stack)
+void	free_2d(char **bagage)
 {
-	if (!stack)
-		return (0);
-	while (stack->next)
+	int	i;
+
+	i = 0;
+	while (bagage[i])
 	{
-		if ((stack->rank) + 1 != stack->next->rank)
-			return (0);
-		stack = stack->next;
+		free(bagage[i]);
+		i++;
 	}
-	return (1);
+	free(bagage);
+}
+
+void	clear_free(t_list **stack_a, t_list **stack_b, char **bagage)
+{
+	if (stack_a || stack_b)
+	{
+		if (stack_b)
+			ft_lstclear(stack_b);
+		else
+			ft_lstclear(stack_a);
+	}
+	if (bagage)
+		free_2d(bagage);
+	ft_putstr_fd("Error\n", 2);
+	exit(1);
 }

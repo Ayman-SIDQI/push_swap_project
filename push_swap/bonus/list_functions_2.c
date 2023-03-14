@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_sort.c                                     :+:      :+:    :+:   */
+/*   list_functions_2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 11:38:10 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/13 15:25:55 by asidqi           ###   ########.fr       */
+/*   Created: 2023/02/21 12:42:26 by asidqi            #+#    #+#             */
+/*   Updated: 2023/03/06 16:32:19 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
-int	check_sort(t_list *stack)
+int	ft_lstsize(t_list *lst)
 {
-	if (!stack)
-		return (0);
-	while (stack->next)
+	int		i;
+	t_list	*curr;
+
+	curr = lst;
+	i = 0;
+	while (curr != NULL)
 	{
-		if ((stack->rank) + 1 != stack->next->rank)
-			return (0);
-		stack = stack->next;
+		i++;
+		curr = curr->next;
 	}
-	return (1);
+	return (i);
 }

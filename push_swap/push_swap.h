@@ -6,7 +6,7 @@
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 21:09:09 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/10 22:07:40 by asidqi           ###   ########.fr       */
+/*   Updated: 2023/03/13 22:25:09 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include<stdio.h>
 # include<stdlib.h>
 # include<unistd.h>
+// # include "get_next_line.h"
 
 typedef struct s_list
 {
@@ -39,7 +40,7 @@ void	ft_putchar_fd(char c, int fd);
 char	**ft_split(char const *so, char dm);
 char	*ft_substr(char const *s, int start, int len);
 char	*ft_strdup(const char *s1);
-int		ft_strlen(const char *s);
+int		ft_strlen2(const char *s);
 void	*ft_calloc(int count, int size);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
@@ -73,5 +74,14 @@ void	homecoming(t_list **stack_a, t_list **stack_b);
 short	range(int min, int current_rank);
 void	mega_sort(t_list **stack_a, t_list **stack_b);
 void	ultra_sort(t_list **stack_a, t_list **stack_b);
+void	checker_sa(t_list **root, char f);
+void	checker_sb(t_list **root, char f);
+void	checker_ss(t_list **stack_a, t_list **stack_b);
+void	checker_pa(t_list **stack_a, t_list **stack_b);
+void	checker_pb(t_list **stack_a, t_list **stack_b);
+void	checker_ra_rb(t_list **stack_a, char letter);
+void	checker_rr(t_list **stack_a, t_list **stack_b);
+void	checker_rra_rrb(t_list **stack_a, char letter);
+void	checker_rrr(t_list **stack_a, t_list **stack_b);
 
 #endif
