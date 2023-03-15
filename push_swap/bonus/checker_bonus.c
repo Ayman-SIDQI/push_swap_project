@@ -6,7 +6,7 @@
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 16:06:29 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/14 16:33:41 by asidqi           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:29:30 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,9 @@ int	main(int ac, char **av)
 		free(gnl);
 		gnl = get_next_line(0);
 	}
-	printf("this is the size of balls : %d\n", ft_lstsize(ball));
 	if (check_sort(all) == 1 && ft_lstsize(ball) == 0 && status != -1)
 		return (ft_putstr_fd("OK\n", 1), 1);
-	else if (check_sort(all) != 1 || status != -1 || ball)
+	else if ((check_sort(all) != 1 || ball) && status != -1)
 		return (ft_putstr_fd("KO\n", 1), 1);
 	return (ft_putstr_fd("Error\n", 1), 1);
 }

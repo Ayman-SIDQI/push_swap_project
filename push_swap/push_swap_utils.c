@@ -6,11 +6,20 @@
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 14:25:09 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/13 20:00:32 by asidqi           ###   ########.fr       */
+/*   Updated: 2023/03/14 22:45:33 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
+
+void	free_3d(char **check, t_list *all)
+{
+	(void)check;
+	ft_putstr_fd("Error\n", 2);
+	ft_lstclear(&all);
+	// free_2d(check);
+	exit(1);
+}
 
 void	rank_list(t_list *stack, int len)
 {
@@ -52,6 +61,24 @@ int	ft_ispace(char *str)
 	return (0);
 }
 
+int	check_filled(char *check)
+{
+	int	o;
+	int	len;
+
+	o = 0;
+	len = 0;
+	while (check[o])
+	{
+		if (check[o] == ' ')
+			len++;
+		o++;
+	}
+	if (len == o)
+		return (1);
+	return (0);
+}
+
 t_list	*split_numbers(char **av, t_list *all)
 {
 	int		i;
@@ -63,6 +90,8 @@ t_list	*split_numbers(char **av, t_list *all)
 	check = NULL;
 	while (av[i])
 	{
+		if (av[i][0] == '\0' || check_filled(av[i]))
+			free_3d(check, all);
 		check = ft_split(av[i], ' ');
 		while (check[o])
 		{

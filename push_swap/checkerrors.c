@@ -6,7 +6,7 @@
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:06:37 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/07 15:53:28 by asidqi           ###   ########.fr       */
+/*   Updated: 2023/03/15 10:08:07 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	checksafe(char *str, t_list *all, char **whole)
 {
-	if (ft_isdigit(str) \
+	if ((str[0] == '\0') \
+	|| (ft_isdigit(str)) \
 	|| (ft_atoi(str) == 0 && !ft_iszerostring(str)) \
 	|| !(ft_strcmp(str, "\0")) \
 	|| ft_strcmp1(str, ft_itoa(ft_atoi(str))) \
