@@ -6,7 +6,7 @@
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 14:25:09 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/14 22:46:46 by asidqi           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:53:14 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	free_3d(char **check, t_list *all)
 	(void)check;
 	ft_putstr_fd("Error\n", 2);
 	ft_lstclear(&all);
-	free_2d(check);
 	exit(1);
 }
 

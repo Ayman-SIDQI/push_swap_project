@@ -6,14 +6,13 @@
 /*   By: asidqi <asidqi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 21:09:09 by asidqi            #+#    #+#             */
-/*   Updated: 2023/03/14 16:15:56 by asidqi           ###   ########.fr       */
+/*   Updated: 2023/03/15 12:02:49 by asidqi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include<stdio.h>
 # include<stdlib.h>
 # include<unistd.h>
 # include "bonus/get_next_line.h"
